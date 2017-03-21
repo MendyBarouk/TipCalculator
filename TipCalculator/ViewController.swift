@@ -37,9 +37,7 @@ class ViewController: UIViewController {
     }
     
     func displayPrices(tipPercent: Float) {
-        
-        //guard let price = Double(textFieldPrice.text!) else { return <#return value#> }
-        
+                
         guard let price = Float(textFieldPrice.text!) else {
             labelTip.text = "₪ Tip"
             labelTotalPrice.text = "₪ Total"
