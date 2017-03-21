@@ -38,13 +38,14 @@ class ViewController: UIViewController {
     
     func displayPrices(tipPercent: Double) {
         
-        guard textFieldPrice.text != nil && (Double(textFieldPrice.text!) != nil) && !(textFieldPrice.text?.isEmpty)! else {
+        //guard let price = Double(textFieldPrice.text!) else { return <#return value#> }
+        
+        guard let price = Double(textFieldPrice.text!) else {
             labelTip.text = "₪ Tip"
             labelTotalPrice.text = "₪ Total"
             return
         }
         
-        let price: Double = Double(textFieldPrice.text!)!
         let tip: Double = tipPercent * price
 
         labelTip.text = "₪ " + String(format: "%.2f", tip)
