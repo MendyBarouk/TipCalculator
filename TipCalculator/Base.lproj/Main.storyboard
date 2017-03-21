@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uO-to-YSd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="hvW-Nk-3ef"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Tip Calculator" id="g05-eQ-QnU"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qg8-vx-XUm">
+                                <rect key="frame" x="88" y="112" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3Xp-Zq-v6d"/>
+                                    <constraint firstAttribute="height" constant="60" id="maF-Pu-6v7"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AJY-Od-cba">
+                                <rect key="frame" x="88" y="228" width="200" height="29"/>
+                                <color key="backgroundColor" red="0.77499610190000001" green="0.97633618119999999" blue="0.77780449389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                                <color key="tintColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₪ Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8W-JS-KXt">
+                                <rect key="frame" x="88" y="312" width="200" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="em3-Cq-Vbo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₪ Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-Pt-Y2O">
+                                <rect key="frame" x="88" y="374" width="200" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="ply-iD-yWL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qg8-vx-XUm" firstAttribute="top" secondItem="5uO-to-YSd" secondAttribute="bottom" constant="56" id="4X1-Lx-Cfc"/>
+                            <constraint firstItem="AJY-Od-cba" firstAttribute="trailing" secondItem="qg8-vx-XUm" secondAttribute="trailing" id="6YW-Dg-kvs"/>
+                            <constraint firstItem="m8W-JS-KXt" firstAttribute="top" secondItem="AJY-Od-cba" secondAttribute="bottom" constant="56" id="A8p-Ab-eKa"/>
+                            <constraint firstItem="5uO-to-YSd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Eot-bR-kfB"/>
+                            <constraint firstItem="m8W-JS-KXt" firstAttribute="leading" secondItem="AJY-Od-cba" secondAttribute="leading" id="FZJ-UW-ebC"/>
+                            <constraint firstItem="Tyy-Pt-Y2O" firstAttribute="leading" secondItem="m8W-JS-KXt" secondAttribute="leading" id="IbH-Uf-V8l"/>
+                            <constraint firstAttribute="trailing" secondItem="5uO-to-YSd" secondAttribute="trailing" id="Ihi-y1-rXV"/>
+                            <constraint firstItem="Tyy-Pt-Y2O" firstAttribute="top" secondItem="m8W-JS-KXt" secondAttribute="bottom" constant="20" id="Ir4-9s-Wci"/>
+                            <constraint firstItem="Tyy-Pt-Y2O" firstAttribute="trailing" secondItem="m8W-JS-KXt" secondAttribute="trailing" id="SAS-gK-oQR"/>
+                            <constraint firstItem="AJY-Od-cba" firstAttribute="top" secondItem="qg8-vx-XUm" secondAttribute="bottom" constant="56" id="luF-Sw-zht"/>
+                            <constraint firstItem="m8W-JS-KXt" firstAttribute="trailing" secondItem="AJY-Od-cba" secondAttribute="trailing" id="rdc-1W-YeP"/>
+                            <constraint firstItem="qg8-vx-XUm" firstAttribute="centerX" secondItem="5uO-to-YSd" secondAttribute="centerX" id="svi-C5-ABj"/>
+                            <constraint firstItem="AJY-Od-cba" firstAttribute="leading" secondItem="qg8-vx-XUm" secondAttribute="leading" id="tsk-EM-7jd"/>
+                            <constraint firstItem="5uO-to-YSd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wnV-2k-Cq5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SCTipPercentage" destination="AJY-Od-cba" id="tac-E0-qWp"/>
+                        <outlet property="labelTip" destination="m8W-JS-KXt" id="kCj-h8-ZFE"/>
+                        <outlet property="labelTotalPrice" destination="Tyy-Pt-Y2O" id="U9Q-te-9fC"/>
+                        <outlet property="textFieldPrice" destination="qg8-vx-XUm" id="Vl5-6c-GcE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
