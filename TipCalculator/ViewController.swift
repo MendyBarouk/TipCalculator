@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     //MARK: --My Function--
     func calculatePrice() {
-        var tipPercent: Double = 0
+        var tipPercent: Float = 0
         switch SCTipPercentage.selectedSegmentIndex {
         case 0: tipPercent = 0.1
         case 1: tipPercent = 0.15
@@ -36,17 +36,17 @@ class ViewController: UIViewController {
         displayPrices(tipPercent: tipPercent)
     }
     
-    func displayPrices(tipPercent: Double) {
+    func displayPrices(tipPercent: Float) {
         
         //guard let price = Double(textFieldPrice.text!) else { return <#return value#> }
         
-        guard let price = Double(textFieldPrice.text!) else {
+        guard let price = Float(textFieldPrice.text!) else {
             labelTip.text = "₪ Tip"
             labelTotalPrice.text = "₪ Total"
             return
         }
         
-        let tip: Double = tipPercent * price
+        let tip: Float = tipPercent * price
 
         labelTip.text = "₪ " + String(format: "%.2f", tip)
         labelTotalPrice.text = "₪ " + String(format: "%.2f", tip + price)
